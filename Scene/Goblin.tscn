@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctglk8iyimo7x"]
+
+[ext_resource type="Texture2D" uid="uid://dp7bjgxmf1un1" path="res://Asset/Goblin/gobelin.png" id="1_51rnn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4xl5"]
+radius = 40.1995
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_51rnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t4xl5")
