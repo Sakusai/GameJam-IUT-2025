@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://buir17lktrcyl"]
+
+[ext_resource type="Texture2D" uid="uid://c3sgovmsd0j4i" path="res://Asset/Knight/chevalier.png" id="1_3edb6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxi8o"]
+size = Vector2(77, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtdql"]
+atlas = ExtResource("1_3edb6")
+region = Rect2(0, 0, 1754, 2480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po11i"]
+atlas = ExtResource("1_3edb6")
+region = Rect2(1754, 0, 1754, 2480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hacf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtdql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po11i")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 3.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, -3)
+shape = SubResource("RectangleShape2D_hxi8o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.08, 0.08)
+sprite_frames = SubResource("SpriteFrames_hacf7")
+animation = &"new_animation"
+frame_progress = 0.984612
+offset = Vector2(150, 0)
