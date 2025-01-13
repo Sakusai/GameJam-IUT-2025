@@ -19,3 +19,17 @@ offset = Vector2(-18, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8.5, -4)
 shape = SubResource("RectangleShape2D_4igk3")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(-74, -5)
+
+[node name="MoveTime" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="ShootTime" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="MoveTime" to="." method="_on_move_time_timeout"]
+[connection signal="timeout" from="ShootTime" to="." method="_on_shoot_time_timeout"]
