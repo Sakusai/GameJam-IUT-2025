@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://1n4bvn1gba5g"]
+
+[ext_resource type="Texture2D" uid="uid://ckvmwmjrmn4xa" path="res://Asset/background.png" id="1_uqbae"]
+[ext_resource type="PackedScene" uid="uid://ehli18e000uv" path="res://Scene/ennemy_spawner.tscn" id="2_p1rju"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_uqbae")
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 648)
+
+[node name="EnnemySpawner" parent="." instance=ExtResource("2_p1rju")]

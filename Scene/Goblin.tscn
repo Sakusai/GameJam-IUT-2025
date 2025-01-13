@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctglk8iyimo7x"]
+[gd_scene load_steps=4 format=3 uid="uid://ctglk8iyimo7x"]
 
 [ext_resource type="Texture2D" uid="uid://dp7bjgxmf1un1" path="res://Asset/Goblin/gobelin.png" id="1_51rnn"]
+[ext_resource type="Script" path="res://Script/goblin.gd" id="1_pnuhu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4xl5"]
 radius = 40.1995
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_pnuhu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.08, 0.08)
