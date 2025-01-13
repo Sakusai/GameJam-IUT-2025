@@ -20,11 +20,9 @@ func spawn_ennemy():
 	add_child(enemy)
 
 func _on_spawntimer_timeout() -> void:
-	print(nbspawn)
 	if nbspawn <= 5:
 		spawn_ennemy()
 		nbspawn +=1
-		print(nbspawn)
 
 static func updateNbSpawn():
 	nbspawn -=1

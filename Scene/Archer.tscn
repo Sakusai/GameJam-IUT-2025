@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://5wvfgmb5g4ge"]
+[gd_scene load_steps=4 format=3 uid="uid://5wvfgmb5g4ge"]
 
+[ext_resource type="Script" path="res://Script/archer.gd" id="1_hxraj"]
 [ext_resource type="Texture2D" uid="uid://c524rl0krv17n" path="res://Asset/Archer/archer.png" id="1_j04nx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdeg4"]
-size = Vector2(159, 181)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4igk3"]
+size = Vector2(93, 154)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(11.5, -1.5)
-shape = SubResource("RectangleShape2D_qdeg4")
+[node name="archer" type="Area2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_hxraj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_j04nx")
+offset = Vector2(-18, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, -4)
+shape = SubResource("RectangleShape2D_4igk3")

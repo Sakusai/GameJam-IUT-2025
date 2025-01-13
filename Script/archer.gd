@@ -1,12 +1,6 @@
 extends Area2D
-class_name Goblin
 
-@export var SPEED = 300
-var life = 1
-
-func _physics_process(delta: float) -> void:
-	global_position.x -= SPEED * delta
-	rotate(-0.2)
+var life = 2
 
 func take_damage():
 	life -= 1
