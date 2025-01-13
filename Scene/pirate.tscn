@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnekpg54tf7fc"]
+
+[ext_resource type="Script" path="res://Script/pirate.gd" id="1_ji61e"]
+[ext_resource type="Texture2D" uid="uid://go6cc1r15wco" path="res://Asset/46915794-dessin-anime-pirate-capitaine-personnage-avec-pistolet-pistolet-vectoriel-removebg-preview.png" id="1_njoee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lil7v"]
+size = Vector2(91, 182)
+
+[node name="pirate" type="CharacterBody2D"]
+script = ExtResource("1_ji61e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_njoee")
+offset = Vector2(46, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lil7v")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(137, -51)
