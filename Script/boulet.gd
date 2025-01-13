@@ -1,8 +1,6 @@
 extends Area2D
 class_name Bullet
 
-var life = 2
-
 var SPEED = 1000
 
 func _physics_process(delta: float) -> void:
