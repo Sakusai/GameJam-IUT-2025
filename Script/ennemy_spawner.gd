@@ -1,7 +1,7 @@
 extends Node2D
-
+class_name EnemySpawner
 var spawn_positions = null
-
+static var nbspawn = 0
 var Enemy = [preload("res://Scene/knight.tscn"), 
 		preload("res://Scene/Goblin.tscn"), 
 		preload("res://Scene/Archer.tscn")
@@ -20,4 +20,11 @@ func spawn_ennemy():
 	add_child(enemy)
 
 func _on_spawntimer_timeout() -> void:
+	print(nbspawn)
+	if nbspawn <= 5:
 		spawn_ennemy()
+		nbspawn +=1
+		print(nbspawn)
+
+static func updateNbSpawn():
+	nbspawn -=1
