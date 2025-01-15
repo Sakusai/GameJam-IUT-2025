@@ -30,6 +30,11 @@ autostart = true
 [node name="ShootTime" type="Timer" parent="."]
 one_shot = true
 
+[node name="PointsTimer" type="Timer" parent="."]
+wait_time = 1.4
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="MoveTime" to="." method="_on_move_time_timeout"]
 [connection signal="timeout" from="ShootTime" to="." method="_on_shoot_time_timeout"]
+[connection signal="timeout" from="PointsTimer" to="." method="_on_points_timer_timeout"]

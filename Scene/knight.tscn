@@ -45,4 +45,9 @@ flip_h = true
 position = Vector2(-1, -3)
 shape = SubResource("RectangleShape2D_sp6pa")
 
+[node name="PointsTimer" type="Timer" parent="."]
+wait_time = 1.6
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="PointsTimer" to="." method="_on_points_timer_timeout"]

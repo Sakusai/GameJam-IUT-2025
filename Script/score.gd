@@ -12,12 +12,11 @@ func _process(delta):
 func update():
 	$Label/Label.text = str(score)
 	
+static func _kill_goblin(minus):
+	score += 55 - minus
 
-static func _kill_goblin():
-	score += 50
-
-static func _kill_archer():
-	score += 100
+static func _kill_archer(minus):
+	score += 110 - minus
 	
-static func _kill_Knight():
-	score += 200
+static func _kill_Knight(minus):
+	score += 220 - minus

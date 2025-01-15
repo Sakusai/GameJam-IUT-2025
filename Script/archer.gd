@@ -10,6 +10,9 @@ var Arrow = preload("res://Scene/arrow.tscn")
 
 @export var SPEED = 100
 
+@onready var timer = $PointsTimer
+var minus = 0
+
 func _physics_process(delta: float) -> void:
 	if is_moving:
 		var direction = Vector2.LEFT
@@ -18,7 +21,7 @@ func _physics_process(delta: float) -> void:
 func take_damage():
 	life -= 1
 	if life <= 0:
-		Score._kill_archer()
+		Score._kill_archer(minus)
 		queue_free()
 		
 func destroy():
@@ -56,3 +59,7 @@ func _on_move_time_timeout() -> void:
 			timer.wait_time = 1
 			timer.start()
 			tir_num = 0
+
+
+func _on_points_timer_timeout() -> void:
+	minus += 10
