@@ -2,6 +2,8 @@ extends CharacterBody2D
 class_name Pirate
 
 signal spawn_bullet(location)
+signal take_damage(life)
+
 @onready var muzzle = $Muzzle
 
 const SPEED = 500.0
@@ -16,6 +18,7 @@ func _physics_process(delta: float) -> void:
 
 func updateLife():
 	life -= 1
+	emit_signal("take_damage", life)
 	if life <= 0:
 		queue_free()
 

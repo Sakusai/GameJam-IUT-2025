@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cme2fh0pejfn6"]
+
+[ext_resource type="Script" path="res://Script/score.gd" id="1_t51og"]
+
+[sub_resource type="FontFile" id="FontFile_kk70e"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_hgbbd"]
+font = SubResource("FontFile_kk70e")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_45mbv"]
+font_size = 25
+
+[node name="Score" type="CanvasLayer"]
+script = ExtResource("1_t51og")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 76.0
+offset_bottom = 72.0
+text = "Score :"
+label_settings = SubResource("LabelSettings_hgbbd")
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 2.0
+offset_right = 116.0
+offset_bottom = 37.0
+label_settings = SubResource("LabelSettings_45mbv")

@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 func take_damage():
 	life -= 1
 	if life <= 0:
+		Score._kill_Knight()
 		queue_free()
 		
 func destroy():

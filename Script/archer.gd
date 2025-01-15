@@ -4,8 +4,7 @@ class_name Archer
 var life = 2
 var is_moving: bool = true
 var tir_num = 0
-
-#signal spawn_arrow(location)
+var Arrow = preload("res://Scene/arrow.tscn")
 
 @onready var muzzle = $Muzzle
 
@@ -19,6 +18,7 @@ func _physics_process(delta: float) -> void:
 func take_damage():
 	life -= 1
 	if life <= 0:
+		Score._kill_archer()
 		queue_free()
 		
 func destroy():
@@ -30,7 +30,9 @@ func _on_body_entered(body: Node2D) -> void:
 		destroy()
 
 func shoot():
-	emit_signal("spawn_arrow", muzzle.global_position)
+	var arrow= Arrow.instantiate()
+	get_tree().current_scene.add_child(arrow)
+	arrow.global_position = global_position
 	
 func _on_move_time_timeout() -> void:
 	is_moving = not is_moving
@@ -41,19 +43,16 @@ func _on_move_time_timeout() -> void:
 	else:
 		if tir_num == 0:
 			shoot()
-			print('arrow')
 			timer.wait_time = 1
 			timer.start()
 			tir_num = 1
 		elif tir_num == 1:
 			shoot()
-			print('arrow')
 			timer.wait_time = 1
 			timer.start()
 			tir_num = 2
 		elif tir_num == 2:
 			shoot()
-			print('arrow')
 			timer.wait_time = 1
 			timer.start()
 			tir_num = 0

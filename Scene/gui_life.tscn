@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddi4ep10geko4"]
+
+[ext_resource type="Script" path="res://Script/gui_life.gd" id="1_f12rk"]
+[ext_resource type="Texture2D" uid="uid://boi2ygq5tltjx" path="res://Asset/heart/coeur_plein.png" id="1_fox8n"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_f12rk")
+
+[node name="heart1" type="Sprite2D" parent="."]
+position = Vector2(13, 13)
+texture = ExtResource("1_fox8n")
+
+[node name="heart2" type="Sprite2D" parent="."]
+position = Vector2(39, 13)
+texture = ExtResource("1_fox8n")
+
+[node name="heart3" type="Sprite2D" parent="."]
+position = Vector2(65, 13)
+texture = ExtResource("1_fox8n")

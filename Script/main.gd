@@ -1,6 +1,8 @@
 extends Node2D
+class_name Main
 
 var Bullet = preload("res://Scene/bullet.tscn")
+
 
 
 func _on_pirate_spawn_bullet(location: Variant) -> void:

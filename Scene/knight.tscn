@@ -37,7 +37,7 @@ script = ExtResource("1_0560v")
 scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_vmsrp")
 animation = &"walk"
-frame_progress = 0.400569
+frame_progress = 0.230759
 offset = Vector2(-187.5, 0)
 flip_h = true
 
