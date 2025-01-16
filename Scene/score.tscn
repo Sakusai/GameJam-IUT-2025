@@ -20,9 +20,13 @@ cache/0/25/0/scale = 1.0
 [sub_resource type="LabelSettings" id="LabelSettings_hgbbd"]
 font = SubResource("FontFile_kk70e")
 font_size = 25
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_45mbv"]
 font_size = 25
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Score" type="CanvasLayer"]
 script = ExtResource("1_t51og")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://1n4bvn1gba5g"]
 
-[ext_resource type="Texture2D" uid="uid://ckvmwmjrmn4xa" path="res://Asset/background.png" id="1_uqbae"]
+[ext_resource type="Texture2D" uid="uid://celk004w15es4" path="res://Asset/background.png" id="1_uqbae"]
 [ext_resource type="Script" path="res://Script/main.gd" id="1_uuhuy"]
 [ext_resource type="PackedScene" uid="uid://ehli18e000uv" path="res://Scene/ennemy_spawner.tscn" id="2_p1rju"]
 [ext_resource type="PackedScene" uid="uid://onqnfgjq562y" path="res://Scene/death_zone.tscn" id="3_iijcv"]
