@@ -22,4 +22,4 @@ Vous l'aurez donc compris, plus les ennemis sont éliminés tôts, mieux cela en
 
 Et enfin, n'oubliez jamais la règle n°6 du code des pirates : amusez-vous ! HAR HAR HAR MOUSSAILLON 🏴‍☠️ ⚔️ 
 
-<img src="./Asset/havefun.png"/>
+<img src="./havefunstyle.png"/>
