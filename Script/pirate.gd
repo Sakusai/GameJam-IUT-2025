@@ -25,3 +25,7 @@ func updateLife():
 
 func shoot():
 	emit_signal("spawn_bullet", muzzle.global_position)
+
+
+func _on_death_zone_damage_pirate() -> void:
+	updateLife()
