@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cdx10m71cvyw2"]
+[gd_scene load_steps=18 format=3 uid="uid://cdx10m71cvyw2"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_pke27"]
 [ext_resource type="Texture2D" uid="uid://bvxqqpu3fytcp" path="res://Asset/heart/background.jpg" id="2_bop1x"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://colxs2xpgt8aw" path="res://Asset/input/keyboard_r.png" id="7_5g4wa"]
 [ext_resource type="Texture2D" uid="uid://b6kcp3wce4boj" path="res://Asset/input/keyboard_space.png" id="8_6nhsp"]
 [ext_resource type="Texture2D" uid="uid://c7us35mfcwfak" path="res://Asset/input/keyboard_arrow_down.png" id="9_g86j6"]
+[ext_resource type="Texture2D" uid="uid://b8yauj7exuymf" path="res://Asset/poulai_mieux.png" id="11_vluc2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iomkd"]
 font_size = 55
@@ -188,6 +189,12 @@ texture = ExtResource("8_6nhsp")
 texture_filter = 1
 position = Vector2(583, 545)
 texture = ExtResource("9_g86j6")
+
+[node name="PoulaiMieux" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(921, 352)
+scale = Vector2(1.67, 1.69)
+texture = ExtResource("11_vluc2")
 
 [connection signal="pressed" from="Control/ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="Control/ButtonPlay" to="." method="_on_button_play_pressed"]

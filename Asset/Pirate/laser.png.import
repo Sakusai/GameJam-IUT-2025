@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://go6cc1r15wco"
-path="res://.godot/imported/46915794-dessin-anime-pirate-capitaine-personnage-avec-pistolet-pistolet-vectoriel-removebg-preview.png-7c47c4f0ee2a7af61b870a3854be2d3f.ctex"
+uid="uid://bfhdyn8rdiclv"
+path="res://.godot/imported/laser.png-c8dab38d2864fb68570b621325074bae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/46915794-dessin-anime-pirate-capitaine-personnage-avec-pistolet-pistolet-vectoriel-removebg-preview.png"
-dest_files=["res://.godot/imported/46915794-dessin-anime-pirate-capitaine-personnage-avec-pistolet-pistolet-vectoriel-removebg-preview.png-7c47c4f0ee2a7af61b870a3854be2d3f.ctex"]
+source_file="res://Asset/Pirate/laser.png"
+dest_files=["res://.godot/imported/laser.png-c8dab38d2864fb68570b621325074bae.ctex"]
 
 [params]
 

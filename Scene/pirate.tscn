@@ -1,25 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnekpg54tf7fc"]
 
 [ext_resource type="Script" path="res://Script/pirate.gd" id="1_ji61e"]
-[ext_resource type="Texture2D" uid="uid://go6cc1r15wco" path="res://Asset/46915794-dessin-anime-pirate-capitaine-personnage-avec-pistolet-pistolet-vectoriel-removebg-preview.png" id="1_njoee"]
+[ext_resource type="Texture2D" uid="uid://d3owlvtqsj8hb" path="res://Asset/Pirate/pirate.png" id="2_i2x14"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lil7v"]
-size = Vector2(91, 182)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j5ngj"]
+radius = 48.75
+height = 199.0
 
 [node name="pirate" type="CharacterBody2D"]
 script = ExtResource("1_ji61e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_njoee")
+position = Vector2(0, -5.96046e-08)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_i2x14")
 offset = Vector2(46, 2)
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_lil7v")
+position = Vector2(9.25, -5.5)
+shape = SubResource("CapsuleShape2D_j5ngj")
 
 [node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(137, -51)
+position = Vector2(22, 9)
 
 [node name="reload" type="Timer" parent="."]
 
