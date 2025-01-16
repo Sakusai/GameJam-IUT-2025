@@ -27,7 +27,7 @@ font_size = 25
 [node name="Score" type="CanvasLayer"]
 script = ExtResource("1_t51og")
 
-[node name="Label" type="Label" parent="."]
+[node name="score" type="Label" parent="."]
 offset_left = 2.0
 offset_top = 38.0
 offset_right = 76.0
@@ -35,10 +35,33 @@ offset_bottom = 72.0
 text = "Score :"
 label_settings = SubResource("LabelSettings_hgbbd")
 
-[node name="Label" type="Label" parent="Label"]
+[node name="score_label" type="Label" parent="score"]
 layout_mode = 0
 offset_left = 76.0
 offset_top = 2.0
 offset_right = 116.0
 offset_bottom = 37.0
+label_settings = SubResource("LabelSettings_45mbv")
+
+[node name="ammunition" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 76.0
+offset_right = 78.0
+offset_bottom = 110.0
+text = "Ammunition :"
+label_settings = SubResource("LabelSettings_hgbbd")
+
+[node name="ammunition_label" type="Label" parent="ammunition"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 2.0
+offset_right = 192.0
+offset_bottom = 37.0
+label_settings = SubResource("LabelSettings_45mbv")
+
+[node name="reloading" type="Label" parent="ammunition"]
+offset_left = 182.0
+offset_top = 1.0
+offset_right = 322.0
+offset_bottom = 36.0
 label_settings = SubResource("LabelSettings_45mbv")
