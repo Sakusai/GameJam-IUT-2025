@@ -29,5 +29,10 @@ position = Vector2(136, 396)
 
 [node name="Score" parent="." instance=ExtResource("7_kjd8d")]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(498, 1, 500, 650, 573, 650, 568, -38, -93, -28, -73, 738, 498, 744, 612, 651, -1, 650, -3, 1)
+
 [connection signal="spawn_bullet" from="pirate" to="." method="_on_pirate_spawn_bullet"]
 [connection signal="take_damage" from="pirate" to="CanvasLayer" method="_on_pirate_take_damage"]
