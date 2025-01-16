@@ -10,7 +10,7 @@ Erwann MATON et Romain LEROY - WATCH ARCANE Incorporated
 Il vous suffit de cloner le dépôt puis de lancer le fichier **Horacio le Béhuté contre l'Empire médiéval.exe** et amusez vous ! Tout simplement.
 
 ### Linux
-Il vous suffit de lancer cloner le dépôt le fichier **Gamejam.x86_64** et amusez vous ! Oui c'est aussi simple que ça.
+Il vous suffit de cloner le dépôt puis de lancer le fichier **Gamejam.x86_64** et amusez vous ! Oui c'est aussi simple que ça.
 
 *Eventuel débug dû aux droits : `chmod +x Gamejam.x86_64`*
 ## Comment jouer
