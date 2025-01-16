@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdx10m71cvyw2"]
+[gd_scene load_steps=19 format=3 uid="uid://cdx10m71cvyw2"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_pke27"]
 [ext_resource type="Texture2D" uid="uid://bvxqqpu3fytcp" path="res://Asset/heart/background.jpg" id="2_bop1x"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://colxs2xpgt8aw" path="res://Asset/input/keyboard_r.png" id="7_5g4wa"]
 [ext_resource type="Texture2D" uid="uid://b6kcp3wce4boj" path="res://Asset/input/keyboard_space.png" id="8_6nhsp"]
 [ext_resource type="Texture2D" uid="uid://c7us35mfcwfak" path="res://Asset/input/keyboard_arrow_down.png" id="9_g86j6"]
+[ext_resource type="Texture2D" uid="uid://cxayialolxk4m" path="res://Asset/havefun.png" id="11_drgvo"]
 [ext_resource type="Texture2D" uid="uid://b8yauj7exuymf" path="res://Asset/poulai_mieux.png" id="11_vluc2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iomkd"]
@@ -126,6 +127,7 @@ offset_right = 134.0
 offset_bottom = 16.0
 
 [node name="score" type="Label" parent="Control2"]
+layout_mode = 0
 offset_left = 315.0
 offset_top = 406.0
 offset_right = 528.0
@@ -142,6 +144,7 @@ offset_bottom = 458.0
 label_settings = SubResource("LabelSettings_b4t1s")
 
 [node name="reload" type="Label" parent="Control2"]
+layout_mode = 0
 offset_left = 274.0
 offset_top = 493.0
 offset_right = 357.0
@@ -150,6 +153,7 @@ text = "Reload"
 label_settings = SubResource("LabelSettings_vnnyl")
 
 [node name="shoot" type="Label" parent="Control2"]
+layout_mode = 0
 offset_left = 381.0
 offset_top = 493.0
 offset_right = 451.0
@@ -179,6 +183,7 @@ texture = ExtResource("7_5g4wa")
 
 [node name="TextureRect2" type="TextureRect" parent="Control2"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 358.0
 offset_top = 492.0
 offset_right = 476.0
@@ -190,11 +195,17 @@ texture_filter = 1
 position = Vector2(583, 545)
 texture = ExtResource("9_g86j6")
 
-[node name="PoulaiMieux" type="Sprite2D" parent="Control2"]
+[node name="PoulaiMieux" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(921, 352)
-scale = Vector2(1.67, 1.69)
+position = Vector2(871, 304)
+scale = Vector2(1.69, 1.69)
 texture = ExtResource("11_vluc2")
+
+[node name="Havefun" type="Sprite2D" parent="."]
+position = Vector2(965, 450)
+rotation = 0.111701
+scale = Vector2(0.331522, 0.331522)
+texture = ExtResource("11_drgvo")
 
 [connection signal="pressed" from="Control/ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="Control/ButtonPlay" to="." method="_on_button_play_pressed"]
