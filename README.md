@@ -2,14 +2,14 @@
 
 Erwann MATON et Romain LEROY - WATCH ARCANE Incorporated
 
-## Installation
-
-...
 
 ## Démarrage
 
-...
+### Windows
+Il vous suffit de lancer le fichier **Horacio le Béhuté contre l'Empire médiéval.exe** et amusez vous !
 
+### Linux
+Il vous suffit de lancer le fichier **Gamejam.x86_64** et amusez vous !
 ## Comment jouer
 
 Le but du jeu est d'obtenir le score le plus élevé possible. Plus les ennemis sont éliminés longtemps après leur apparition sur le terrain, moins ils vous rapporteront de points.
