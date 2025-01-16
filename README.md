@@ -21,3 +21,5 @@ Votre pirate Horacio dispose de 3 vies, qui vous seront déduites si vous vous f
 Vous l'aurez donc compris, plus les ennemis sont éliminés tôts, mieux cela en sera pour votre score (et vos vies aussi...)
 
 Et enfin, n'oubliez jamais la règle n°6 du code des pirates : amusez-vous ! HAR HAR HAR MOUSSAILLON 🏴‍☠️ ⚔️ 
+
+<img src="./Asset/havefun.png"/>
