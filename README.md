@@ -1,6 +1,6 @@
 ## Horacio le Béhuté contre l'Empire Médiéval
 
-Erwann MATON et Romain LEROY
+Erwann MATON et Romain LEROY - WATCH ARCANE Incorporated
 
 ## Installation
 
