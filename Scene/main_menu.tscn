@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdx10m71cvyw2"]
+[gd_scene load_steps=17 format=3 uid="uid://cdx10m71cvyw2"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_pke27"]
 [ext_resource type="Texture2D" uid="uid://bvxqqpu3fytcp" path="res://Asset/heart/background.jpg" id="2_bop1x"]
 [ext_resource type="StyleBox" uid="uid://djnbfc4lw4kd3" path="res://style/button.tres" id="2_r23ng"]
+[ext_resource type="StyleBox" uid="uid://blaonnwnwqt2j" path="res://style/hover.tres" id="3_taymt"]
 [ext_resource type="Texture2D" uid="uid://djff2fmo4dk6m" path="res://Asset/input/keyboard_arrow_left.png" id="4_3sayv"]
 [ext_resource type="Texture2D" uid="uid://c8dldug88ykhy" path="res://Asset/input/keyboard_arrow_right.png" id="5_okvsa"]
 [ext_resource type="Texture2D" uid="uid://crjy8vs8gsd5x" path="res://Asset/input/keyboard_arrow_up.png" id="6_lprmx"]
@@ -29,12 +30,15 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hsd7"]
-bg_color = Color(0, 0.64, 0.277333, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="LabelSettings" id="LabelSettings_i4m75"]
+font_size = 35
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b4t1s"]
+font_size = 35
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vnnyl"]
 font_size = 25
@@ -108,7 +112,7 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
-theme_override_styles/hover = SubResource("StyleBoxFlat_7hsd7")
+theme_override_styles/hover = ExtResource("3_taymt")
 theme_override_styles/normal = ExtResource("2_r23ng")
 text = "Play"
 
@@ -119,6 +123,22 @@ offset_left = 94.0
 offset_top = -24.0
 offset_right = 134.0
 offset_bottom = 16.0
+
+[node name="score" type="Label" parent="Control2"]
+offset_left = 315.0
+offset_top = 406.0
+offset_right = 528.0
+offset_bottom = 455.0
+text = "Votre Score :"
+label_settings = SubResource("LabelSettings_i4m75")
+
+[node name="Label2" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 409.0
+offset_right = 595.0
+offset_bottom = 458.0
+label_settings = SubResource("LabelSettings_b4t1s")
 
 [node name="reload" type="Label" parent="Control2"]
 offset_left = 274.0

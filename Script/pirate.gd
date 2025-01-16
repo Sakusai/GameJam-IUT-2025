@@ -4,6 +4,7 @@ class_name Pirate
 signal spawn_bullet(location)
 signal take_damage(life)
 signal reloading()
+signal death()
 
 @onready var muzzle = $Muzzle
 @onready var timer = $reload
@@ -13,6 +14,7 @@ var nbBullet = 6
 var input_vector = Vector2.ZERO
 var is_reload = false
 
+	
 func _physics_process(delta: float) -> void:
 	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	global_position += input_vector * SPEED * delta
@@ -30,6 +32,7 @@ func updateLife():
 	emit_signal("take_damage", life)
 	if life <= 0:
 		queue_free()
+		emit_signal("death")
 
 func shoot():
 	if nbBullet>0 and !is_reload:
@@ -52,3 +55,8 @@ func _on_death_zone_damage_pirate() -> void:
 func _on_reload_timeout() -> void:
 	emit_signal("reloading")
 	is_reload = false
+
+
+func _on_control_reload() -> void:
+	get_tree().reload_current_scene()
+	

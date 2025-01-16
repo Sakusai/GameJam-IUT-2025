@@ -11,6 +11,8 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_uuhuy")
 
+[node name="Node2D" type="Node2D" parent="."]
+
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 texture = ExtResource("1_uqbae")
@@ -35,6 +37,7 @@ position = Vector2(136, 396)
 polygon = PackedVector2Array(498, 1, 500, 650, 573, 650, 568, -38, -93, -28, -73, 738, 498, 744, 612, 651, -1, 650, -3, 1)
 
 [connection signal="damage_pirate" from="DeathZone" to="pirate" method="_on_death_zone_damage_pirate"]
+[connection signal="death" from="pirate" to="." method="_on_pirate_death"]
 [connection signal="reloading" from="pirate" to="Score" method="_on_pirate_reloading"]
 [connection signal="spawn_bullet" from="pirate" to="." method="_on_pirate_spawn_bullet"]
 [connection signal="take_damage" from="pirate" to="CanvasLayer" method="_on_pirate_take_damage"]

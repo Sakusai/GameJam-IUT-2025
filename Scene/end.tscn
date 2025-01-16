@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://3irymi5e358q"]
+
+[ext_resource type="StyleBox" uid="uid://blaonnwnwqt2j" path="res://style/hover.tres" id="2_3v6kf"]
+[ext_resource type="Texture2D" uid="uid://bvxqqpu3fytcp" path="res://Asset/heart/background.jpg" id="2_qg4cs"]
+[ext_resource type="StyleBox" uid="uid://djnbfc4lw4kd3" path="res://style/button.tres" id="3_14ywa"]
+
+[sub_resource type="GDScript" id="GDScript_4okmg"]
+script/source = "extends Control
+
+signal reload
+
+func _on_rejouer_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scene/main.tscn\")
+	emit_signal(\"reload\")
+
+
+func _on_main_menu_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scene/main_menu.tscn\")
+
+
+func _on_pirate_death() -> void:
+	show()
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_qa7th"]
+font_size = 35
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t3h0n"]
+font_size = 40
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_4okmg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 4032.0
+offset_bottom = 2688.0
+texture = ExtResource("2_qg4cs")
+expand_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 393.0
+offset_top = 214.0
+offset_right = 704.0
+offset_bottom = 283.0
+metadata/_edit_use_anchors_ = true
+
+[node name="score" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Your Score:"
+label_settings = SubResource("LabelSettings_qa7th")
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rejouer" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 468.5
+offset_top = 262.0
+offset_right = 643.5
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = ExtResource("2_3v6kf")
+theme_override_styles/normal = ExtResource("3_14ywa")
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="main menu" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 469.0
+offset_top = 353.0
+offset_right = 644.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = ExtResource("2_3v6kf")
+theme_override_styles/normal = ExtResource("3_14ywa")
+text = "Main menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 153.0
+offset_right = 707.0
+offset_bottom = 208.0
+text = "Well Played !"
+label_settings = SubResource("LabelSettings_t3h0n")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/Rejouer" to="." method="_on_rejouer_pressed"]
+[connection signal="pressed" from="Control/main menu" to="." method="_on_main_menu_pressed"]

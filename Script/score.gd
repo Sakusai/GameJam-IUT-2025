@@ -5,6 +5,8 @@ static var score: int = 0
 static var ammunition: int = 6
 static var reloading = ""
 func _ready():
+	reset_score()
+	show()
 	update()
 	
 func _process(delta):
@@ -30,6 +32,16 @@ static func _kill_archer(minus):
 static func _kill_Knight(minus):
 	score += 220 - minus
 
+static func get_score():
+	return score
+
+static func reset_score():
+	score = 0
+	ammunition = 6
 
 func _on_pirate_reloading() -> void:
 	reloading = ""
+
+
+func _on_pirate_death() -> void:
+	hide()
