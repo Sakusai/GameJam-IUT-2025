@@ -1,0 +1,173 @@
+[gd_scene load_steps=15 format=3 uid="uid://cdx10m71cvyw2"]
+
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_pke27"]
+[ext_resource type="Texture2D" uid="uid://bvxqqpu3fytcp" path="res://Asset/heart/background.jpg" id="2_bop1x"]
+[ext_resource type="StyleBox" uid="uid://djnbfc4lw4kd3" path="res://style/button.tres" id="2_r23ng"]
+[ext_resource type="Texture2D" uid="uid://djff2fmo4dk6m" path="res://Asset/input/keyboard_arrow_left.png" id="4_3sayv"]
+[ext_resource type="Texture2D" uid="uid://c8dldug88ykhy" path="res://Asset/input/keyboard_arrow_right.png" id="5_okvsa"]
+[ext_resource type="Texture2D" uid="uid://crjy8vs8gsd5x" path="res://Asset/input/keyboard_arrow_up.png" id="6_lprmx"]
+[ext_resource type="Texture2D" uid="uid://colxs2xpgt8aw" path="res://Asset/input/keyboard_r.png" id="7_5g4wa"]
+[ext_resource type="Texture2D" uid="uid://b6kcp3wce4boj" path="res://Asset/input/keyboard_space.png" id="8_6nhsp"]
+[ext_resource type="Texture2D" uid="uid://c7us35mfcwfak" path="res://Asset/input/keyboard_arrow_down.png" id="9_g86j6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iomkd"]
+font_size = 55
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l226c"]
+bg_color = Color(0.6, 0.06, 0.06, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwt36"]
+bg_color = Color(0.79, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hsd7"]
+bg_color = Color(0, 0.64, 0.277333, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_vnnyl"]
+font_size = 25
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_pke27")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 4032.0
+offset_bottom = 2688.0
+texture = ExtResource("2_bop1x")
+expand_mode = 3
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Game Name" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -197.5
+offset_right = 330.0
+offset_bottom = -42.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Horacio le Béhuté contre 
+l'Empire médiéval"
+label_settings = SubResource("LabelSettings_iomkd")
+horizontal_alignment = 1
+
+[node name="ButtonQuit" type="Button" parent="Control"]
+layout_mode = 2
+offset_left = -556.0
+offset_top = 298.0
+offset_right = -491.0
+offset_bottom = 345.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_l226c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bwt36")
+text = "Quit"
+
+[node name="ButtonPlay" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -42.0
+offset_right = 99.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_7hsd7")
+theme_override_styles/normal = ExtResource("2_r23ng")
+text = "Play"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 94.0
+offset_top = -24.0
+offset_right = 134.0
+offset_bottom = 16.0
+
+[node name="reload" type="Label" parent="Control2"]
+offset_left = 274.0
+offset_top = 493.0
+offset_right = 357.0
+offset_bottom = 528.0
+text = "Reload"
+label_settings = SubResource("LabelSettings_vnnyl")
+
+[node name="shoot" type="Label" parent="Control2"]
+offset_left = 381.0
+offset_top = 493.0
+offset_right = 451.0
+offset_bottom = 528.0
+text = "Shoot"
+label_settings = SubResource("LabelSettings_vnnyl")
+
+[node name="KeyboardArrowLeft" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(529, 545)
+texture = ExtResource("4_3sayv")
+
+[node name="KeyboardArrowRight" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(637, 545)
+texture = ExtResource("5_okvsa")
+
+[node name="KeyboardArrowUp" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(582, 492)
+texture = ExtResource("6_lprmx")
+
+[node name="KeyboardR" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(311, 549)
+texture = ExtResource("7_5g4wa")
+
+[node name="TextureRect2" type="TextureRect" parent="Control2"]
+texture_filter = 1
+offset_left = 358.0
+offset_top = 492.0
+offset_right = 476.0
+offset_bottom = 610.0
+texture = ExtResource("8_6nhsp")
+
+[node name="KeyboardArrowDown" type="Sprite2D" parent="Control2"]
+texture_filter = 1
+position = Vector2(583, 545)
+texture = ExtResource("9_g86j6")
+
+[connection signal="pressed" from="Control/ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="Control/ButtonPlay" to="." method="_on_button_play_pressed"]
