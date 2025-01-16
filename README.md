@@ -17,7 +17,7 @@ Il vous suffit de lancer cloner le dépôt le fichier **Gamejam.x86_64** et amus
 
 Le but du jeu est d'obtenir le score le plus élevé possible. Plus les ennemis sont éliminés longtemps après leur apparition sur le terrain, moins ils vous rapporteront de points.
 
-Pour vous déplacer, utilisez les touches Z Q S D, et pour tirer la barre Espace. Attention cependant, ce laser de bras Fredatomiseur-PY est un petit peu défectueux et ne peux stocker que 6 rayons. Soyez astucieux quand à vos tirs et vos rechargements donc ! Par ailleurs, la touche pour recharger est bel est bien la touche R.
+Pour vous déplacer, utilisez les flèches directionnelles, et pour tirer la barre Espace. Attention cependant, ce laser de bras Fredatomiseur-PY est un petit peu défectueux et ne peux stocker que 6 rayons. Soyez astucieux quand à vos tirs et vos rechargements donc ! Par ailleurs, la touche pour recharger est bel est bien la touche R.
 
 Votre pirate Horacio dispose de 3 vies, qui vous seront déduites si vous vous faites toucher par un ennemi ou un projectile, ou encore si un ennemi atteint la ligne magique invisible derrière vous.
 
