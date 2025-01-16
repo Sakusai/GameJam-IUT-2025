@@ -26,6 +26,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("reload"):
 		print("reload")
 		reload()
+		
+	if nbBullet == 0:
+		print("reload")
+		reload()
 
 func updateLife():
 	life -= 1
@@ -41,7 +45,7 @@ func shoot():
 		emit_signal("spawn_bullet", muzzle.global_position)
 
 func reload():
-	timer.wait_time = 1
+	timer.wait_time = 1.4
 	timer.start()
 	is_reload= true
 	nbBullet = 6
